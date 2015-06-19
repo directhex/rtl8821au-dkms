@@ -1,0 +1,21 @@
+Index: rtl8821au-dkms/Makefile
+===================================================================
+--- rtl8821au-dkms.orig/Makefile	2015-06-19 16:23:58.685335688 +0100
++++ rtl8821au-dkms/Makefile	2015-06-19 17:11:42.849337077 +0100
+@@ -94,14 +94,14 @@
+ INSTALL_PREFIX :=
+ endif
+ 
++export CONFIG_RTL8812AU_8821AU = m
++
+ ifneq ($(KERNELRELEASE),)
+ 
+ obj-$(CONFIG_RTL8812AU_8821AU) := $(MODULE_NAME).o
+ 
+ else
+ 
+-export CONFIG_RTL8812AU_8821AU = m
+-
+ all: modules
+ 
+ modules:

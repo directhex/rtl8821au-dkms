@@ -1,0 +1,29 @@
+Source: rtl8821au
+Section: unknown
+Priority: optional
+Maintainer: Jo Shields <directhex@apebox.org>
+Build-Depends: debhelper (>= 8.0.0), dkms
+Standards-Version: 3.9.4
+Homepage: https://github.com/ulli-kroll/rtl8821au
+
+Package: rtl8821au-dkms
+Architecture: any
+Depends: rtl8821au-firmware, ${misc:Depends}
+Description: dkms source for the r8812au network driver
+ rtl8821au is the Linux device driver released for RealTek RTL8812AU,
+ RTL8821AU WiFi controllers with USB interface.
+ .
+ This package provides the dkms source code for the rtl8821au kernel 
+ modules.  Kernel source or headers are required to compile these 
+ modules.
+
+Package: rtl8821au-firmware
+Architecture: all
+Depends: ${misc:Depends}
+Description: firmware for the r8812au network driver
+ rtl8821au is the Linux device driver released for RealTek RTL8812AU,
+ RTL8821AU WiFi controllers with USB interface.
+ .
+ This package provides the firmware for the rtl8821au kernel 
+ modules.  Kernel source or headers are required to compile these 
+ modules.
